@@ -19,24 +19,19 @@ The code consists of several key steps:
 - `import os`: The os module is imported to interact with the operating system.
 - `HOME = os.getcwd()`: This line sets the current working directory.
 - `!pip install -q roboflow`: Roboflow package is installed quietly.
-- ...
 
 ### Roboflow Integration
 - `rf = Roboflow(api_key="MQ8Yyz59itw2HgM1j536")`: Roboflow API is initialized with the provided API key.
 - `project = rf.workspace("roboflow-100").project("furniture-ngpea")`: We access the Roboflow workspace and project containing our dataset.
-- ...
 
 ### Training the Model
 - `!python train.py ...`: The YOLOv9 model is trained with specified configurations such as batch size, number of epochs, and image size.
-- ...
 
 ### Model Evaluation
 - `Image(filename=f"{HOME}/yolov9/runs/train/exp2/results.png", width=900)`: Training results such as loss curves are displayed.
-- ...
 
 ### Inference
 - `!python detect.py ...`: Object detection is performed on test images using the trained model.
-- ...
 
 ## Conclusion
 By following the steps outlined in this document, users can set up and train custom object detection models using YOLOv9 and Roboflow. Object detection is a versatile technique with applications in various domains, including autonomous vehicles, surveillance, and image understanding. With the robustness of YOLOv9 and the convenience of Roboflow, building and deploying object detection pipelines becomes more accessible to developers and researchers alike.
